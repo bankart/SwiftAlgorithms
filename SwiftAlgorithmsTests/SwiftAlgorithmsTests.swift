@@ -10,10 +10,12 @@ import XCTest
 @testable import SwiftAlgorithms
 
 class SwiftAlgorithmsTests: XCTestCase {
+    var linkedList: LinkedList<String>!
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        linkedList = LinkedList<String>()
     }
     
     override func tearDown() {
@@ -21,9 +23,100 @@ class SwiftAlgorithmsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testLinkedList() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        print("linkedList.isEmpty: \(linkedList.isEmpty)") // true
+        print("linkedList.first: \(linkedList.first)") // nil
+        linkedList.append("Hello")
+        print("linkedList.isEmpty: \(linkedList.isEmpty)") // false
+        print("linkedList.first: \(linkedList.first!.value)") // Hello
+        print("linkedList.last: \(linkedList.last!.value)") // Hello
+//        linkedList.append("World")
+        var node = LinkedListNode(value: "World")
+        linkedList.append(node)
+        print("linkedList.first: \(linkedList.first!.value)") // Hello
+        print("linkedList.last: \(linkedList.last!.value)") // World
+        print("linkedList.first!.previous: \(linkedList.first!.previous)") // nil
+        print("linkedList.first!.next!.value: \(linkedList.first!.next!.value)") //World
+        print("linkedList.last!.previous!.value: \(linkedList.last!.previous!.value)") // Hello
+        print("linkedList.last!.next: \(linkedList.last!.next)") // nil
+        print("linkedList.count: \(linkedList.count)")
+        print("linkedList.node(at: 0).value: \(linkedList.node(at: 0).value)")
+        print("linkedList.node(at: 1).value: \(linkedList.node(at: 1).value)")
+//        print("linkedList.node(at: 2).value: \(linkedList.node(at: 2).value)") // crash
+        linkedList.insert("Swift", at: 1)
+        print("linkedList[0]: \(linkedList[0])")
+        print("linkedList[1]: \(linkedList[1])")
+        print("linkedList[2]: \(linkedList[2])")
+        linkedList.remove(at: 1)
+        node = LinkedListNode(value: "'Swift'")
+        linkedList.insert(node, at: 1)
+        print("linkedList[0]: \(linkedList[0])")
+        print("linkedList[1]: \(linkedList[1])")
+        print("linkedList[2]: \(linkedList[2])")
+    }
+    
+    func testLinkedList2() {
+        print("\n\n\(#function)")
+        let list0 = LinkedList<String>()
+        list0.append("0")
+        list0.append("1")
+        list0.append(LinkedListNode(value: "2"))
+        print("================================")
+        
+        print("list0[0]: \(list0[0])")
+        print("list0[1]: \(list0[1])")
+        print("list0[2]: \(list0[2])")
+        
+        let list1 = LinkedList<String>()
+        list1.append(list0)
+        
+        print("================================")
+        
+        let list2 = LinkedList<String>()
+        list2.append("10")
+        list2.append("11")
+        list2.append("12")
+        
+        list1.insert(list2, at: 1)
+        
+        print("list1[0]: \(list1[0])")
+        print("list1[1]: \(list1[1])")
+        print("list1[2]: \(list1[2])")
+        print("list1[3]: \(list1[3])")
+        print("list1[4]: \(list1[4])")
+        print("list1[5]: \(list1[5])")
+        
+        print("\(#function)\n\n")
+    }
+    
+    func testLinkedList3() {
+        let list: LinkedList2<String> = ["0", "1", "2", "3"]
+//        for node in list {
+//            print("node: \(node.value)")
+//        }
+        print("list.count: \(list.count)")
+        print("====================================")
+//        list.reverse()
+//        for node in list {
+//            print("reverse().node: \(node.value)")
+//        }
+        
+        list.remove(at: 1)
+        print("list.count: \(list.count)")
+        print("list: \(list)")
+        list.removeLast()
+        print("list.count: \(list.count)")
+        print("list: \(list)")
+        list.append("100")
+        print("list.count: \(list.count)")
+        print("list: \(list)")
+        list.insert("50", at: list.count - 1)
+        print("list.count: \(list.count)")
+        print("list: \(list)")
+        let modifiedList = list.map{ "{\($0)}" }
+        print("list: \(modifiedList)")
     }
     
     func testPerformanceExample() {
