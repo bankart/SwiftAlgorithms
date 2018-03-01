@@ -272,7 +272,65 @@ extension LinkedList3: CustomStringConvertible {
 }
 
 
+extension LinkedList3: Collection {
+    
+    public typealias Index = LinkedListIndex<T>
+    // 비어있지 않은 콜렉션의 첫 번째 원소 위치
+    // 만약 콜렉션이 비어있다면 startIndex == endIndex 이므로 O(1)
+    public var startIndex: Index {
+        get {
+            return Index(node: head, tag: 0)
+//            return LinkedListIndex<T>(node: head, tag: 0)
+        }
+    }
+    
+    // 콜렉션의 'fast the end(빠른 마지막 접근)' 위치. 유효한 마지막 subscript 매개변수 보다 1이 큰 값 O(n)
+    // 이는 콜렉션이 마지막 노드의 참조를 유지하는 한 개선될 수 있다.
+    public var endIndex: Index {
+        get {
+            if let h = head {
+                return Index(node: h, tag: count)
+//                return LinkedListIndex<T>(node: h, tag: count)
+            } else {
+                return Index(node: nil, tag: startIndex.tag)
+//                return LinkedListIndex<T>(node: nil, tag: startIndex.tag)
+            }
+        }
+    }
+    
+    public subscript(position: Index) -> T {
+        get {
+            return position.node!.value
+        }
+    }
+    
+    public func index(after index: Index) -> Index {
+        return Index(node: index.node!.next, tag: index.tag+1)
+//        return LinkedListIndex<T>(node: index.node!.next, tag:index.tag + 1)
+    }
+}
 
+public struct LinkedListIndex<T>: Comparable, CustomStringConvertible {
+    fileprivate let node: LinkedList3<T>.LinkedListNode3<T>?
+    fileprivate let tag: Int
+    
+    public static func==<T>(lhs: LinkedListIndex<T>, rhs: LinkedListIndex<T>) -> Bool {
+        return (lhs.tag == rhs.tag)
+    }
+    
+    public static func< <T>(lhs: LinkedListIndex<T>, rhs: LinkedListIndex<T>) -> Bool {
+        return (lhs.tag < rhs.tag)
+    }
+    
+    public init(node: LinkedList3<T>.LinkedListNode3<T>?, tag: Int) {
+        self.node = node
+        self.tag = tag
+    }
+    
+    public var description: String {
+        return "{ \(node!.value)(\(tag)) }"
+    }
+}
 
 
 

@@ -193,6 +193,11 @@ class SwiftAlgorithmsTests: XCTestCase {
         }
         print("\n")
         print(list)
+        print("startIndex: \(list.startIndex)")
+        print("endIndex: \(list.endIndex)")
+        let secondIndex = list.index(after: list.startIndex)
+        print("secondIndex: \(secondIndex)")
+        print("")
         print("\n")
     }
     
