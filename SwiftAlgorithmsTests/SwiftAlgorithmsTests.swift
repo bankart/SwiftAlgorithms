@@ -119,6 +119,83 @@ class SwiftAlgorithmsTests: XCTestCase {
         print("list: \(modifiedList)")
     }
     
+    func testLinkedList4() {
+        let list = LinkedList3<Int>()
+        list.append(0)
+        list.append(1)
+        list.append(2)
+        list.append(3)
+//        print("\n")
+//        for i in 0..<list.count {
+//            print("list[\(i)]: \(list[i])")
+//        }
+        list.insert(-1, at: 0)
+//        print("list.last: \(list.last!.value), tail: \(list.tail!.value)")
+//        print("\n")
+        list.append(100)
+//        for i in 0..<list.count {
+//            print("list[\(i)]: \(list[i])")
+//        }
+//        print("list.last: \(list.last!.value), tail: \(list.tail!.value)")
+//        print("\n")
+        list.insert(30, at: list.count-1)
+//        for i in 0..<list.count {
+//            print("list[\(i)]: \(list[i])")
+//        }
+//        print("list.last: \(list.last!.value), tail: \(list.tail!.value)")
+//        print("\n")
+        
+        let newList = LinkedList3<Int>()
+        for i in stride(from: 10, to: 30, by: 6) {
+            newList.append(i)
+        }
+//        for i in 0..<newList.count {
+//            print("newList[\(i)]: \(newList[i])")
+//        }
+        
+        print("\n")
+//        list.append(newList)
+////        print("list.head: \(list.head!.value), first: \(list.first!.value)")
+////        print("list.last: \(list.last!.value), tail: \(list.tail!.value)")
+//        for i in 0..<list.count {
+//            print("list[\(i)]: \(list[i])")
+//        }
+////        print("list.last: \(list.last!.value), tail: \(list.tail!.value)")
+        
+        list.insert(newList, at: list.count - 2)
+//        for i in 0..<list.count {
+//            print("list[\(i)]: \(list[i])")
+//        }
+//        print("\n")
+        
+        list.remove(list.node(at: 1))
+//        for i in 0..<list.count {
+//            print("list[\(i)]: \(list[i])")
+//        }
+//        print("\n")
+        
+        list.remove(at: 0)
+//        for i in 0..<list.count {
+//            print("list[\(i)]: \(list[i])")
+//        }
+//        print("\n")
+        
+        list.removeLast()
+        for i in 0..<list.count {
+            print("list[\(i)]: \(list[i])")
+        }
+        print("\n")
+        
+        list.reverse()
+        print("list.head: \(list.head!.value), tail: \(list.tail!.value)")
+        for i in 0..<list.count {
+            print("list[\(i)]: \(list[i])")
+        }
+        print("\n")
+        print(list)
+        print("\n")
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

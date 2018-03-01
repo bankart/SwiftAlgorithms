@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E38C4C1120470415004099BF /* LinkedList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38C4C1020470415004099BF /* LinkedList2.swift */; };
+		E3F842942047D43A00DA04EF /* LinkedList3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F842932047D43A00DA04EF /* LinkedList3.swift */; };
 		E3F98EA920463F540049FD56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F98EA820463F540049FD56 /* AppDelegate.swift */; };
 		E3F98EAB20463F540049FD56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F98EAA20463F540049FD56 /* ViewController.swift */; };
 		E3F98EAE20463F540049FD56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F98EAC20463F540049FD56 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		E38C4C1020470415004099BF /* LinkedList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList2.swift; sourceTree = "<group>"; };
+		E3F842932047D43A00DA04EF /* LinkedList3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList3.swift; sourceTree = "<group>"; };
 		E3F98EA520463F540049FD56 /* SwiftAlgorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftAlgorithms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F98EA820463F540049FD56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F98EAA20463F540049FD56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E3F842922047D40B00DA04EF /* LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				E3F98ED720463F980049FD56 /* LinkedList.swift */,
+				E38C4C1020470415004099BF /* LinkedList2.swift */,
+				E3F842932047D43A00DA04EF /* LinkedList3.swift */,
+			);
+			path = LinkedList;
+			sourceTree = "<group>";
+		};
 		E3F98E9C20463F540049FD56 = {
 			isa = PBXGroup;
 			children = (
@@ -133,8 +145,7 @@
 		E3F98ED620463F6C0049FD56 /* datastructures */ = {
 			isa = PBXGroup;
 			children = (
-				E3F98ED720463F980049FD56 /* LinkedList.swift */,
-				E38C4C1020470415004099BF /* LinkedList2.swift */,
+				E3F842922047D40B00DA04EF /* LinkedList */,
 			);
 			path = datastructures;
 			sourceTree = "<group>";
@@ -273,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3F842942047D43A00DA04EF /* LinkedList3.swift in Sources */,
 				E3F98ED820463F980049FD56 /* LinkedList.swift in Sources */,
 				E38C4C1120470415004099BF /* LinkedList2.swift in Sources */,
 				E3F98EAB20463F540049FD56 /* ViewController.swift in Sources */,
