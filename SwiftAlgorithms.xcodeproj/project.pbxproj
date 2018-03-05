@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E325ED2B2048DF9F003FF7FE /* RingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325ED2A2048DF9F003FF7FE /* RingBuffer.swift */; };
+		E354451B204931380007BFC5 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E354451A204931380007BFC5 /* BinaryTree.swift */; };
 		E38C4C1120470415004099BF /* LinkedList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38C4C1020470415004099BF /* LinkedList2.swift */; };
+		E3F7F6AB204C0D9100DBF841 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7F6AA204C0D9100DBF841 /* BinarySearchTree.swift */; };
 		E3F842942047D43A00DA04EF /* LinkedList3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F842932047D43A00DA04EF /* LinkedList3.swift */; };
+		E3F8429720485DBD00DA04EF /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F8429620485DBD00DA04EF /* Tree.swift */; };
 		E3F98EA920463F540049FD56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F98EA820463F540049FD56 /* AppDelegate.swift */; };
 		E3F98EAB20463F540049FD56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F98EAA20463F540049FD56 /* ViewController.swift */; };
 		E3F98EAE20463F540049FD56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F98EAC20463F540049FD56 /* Main.storyboard */; };
@@ -37,8 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E325ED2A2048DF9F003FF7FE /* RingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingBuffer.swift; sourceTree = "<group>"; };
+		E354451A204931380007BFC5 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		E38C4C1020470415004099BF /* LinkedList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList2.swift; sourceTree = "<group>"; };
+		E3F7F6AA204C0D9100DBF841 /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		E3F842932047D43A00DA04EF /* LinkedList3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList3.swift; sourceTree = "<group>"; };
+		E3F8429620485DBD00DA04EF /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		E3F98EA520463F540049FD56 /* SwiftAlgorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftAlgorithms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F98EA820463F540049FD56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F98EAA20463F540049FD56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E325ED292048DF8D003FF7FE /* RingBuffer */ = {
+			isa = PBXGroup;
+			children = (
+				E325ED2A2048DF9F003FF7FE /* RingBuffer.swift */,
+			);
+			path = RingBuffer;
+			sourceTree = "<group>";
+		};
 		E3F842922047D40B00DA04EF /* LinkedList */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +104,16 @@
 				E3F842932047D43A00DA04EF /* LinkedList3.swift */,
 			);
 			path = LinkedList;
+			sourceTree = "<group>";
+		};
+		E3F8429520485DAB00DA04EF /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				E3F8429620485DBD00DA04EF /* Tree.swift */,
+				E354451A204931380007BFC5 /* BinaryTree.swift */,
+				E3F7F6AA204C0D9100DBF841 /* BinarySearchTree.swift */,
+			);
+			path = Tree;
 			sourceTree = "<group>";
 		};
 		E3F98E9C20463F540049FD56 = {
@@ -145,6 +171,8 @@
 		E3F98ED620463F6C0049FD56 /* datastructures */ = {
 			isa = PBXGroup;
 			children = (
+				E325ED292048DF8D003FF7FE /* RingBuffer */,
+				E3F8429520485DAB00DA04EF /* Tree */,
 				E3F842922047D40B00DA04EF /* LinkedList */,
 			);
 			path = datastructures;
@@ -284,10 +312,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E354451B204931380007BFC5 /* BinaryTree.swift in Sources */,
 				E3F842942047D43A00DA04EF /* LinkedList3.swift in Sources */,
 				E3F98ED820463F980049FD56 /* LinkedList.swift in Sources */,
 				E38C4C1120470415004099BF /* LinkedList2.swift in Sources */,
+				E3F8429720485DBD00DA04EF /* Tree.swift in Sources */,
+				E3F7F6AB204C0D9100DBF841 /* BinarySearchTree.swift in Sources */,
 				E3F98EAB20463F540049FD56 /* ViewController.swift in Sources */,
+				E325ED2B2048DF9F003FF7FE /* RingBuffer.swift in Sources */,
 				E3F98EA920463F540049FD56 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

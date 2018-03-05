@@ -201,6 +201,178 @@ class SwiftAlgorithmsTests: XCTestCase {
         print("\n")
     }
     
+    func testTree() {
+        let tree = TreeNode<String>(value: "Beverages")
+        let hotNode = TreeNode<String>(value: "Hot")
+        let coldNode = TreeNode<String>(value: "Cold")
+        tree.addChild(hotNode)
+        tree.addChild(coldNode)
+        
+        let teaNode = TreeNode<String>(value: "Tea")
+        hotNode.addChild(teaNode)
+        teaNode.addChild(TreeNode<String>(value: "Black"))
+        teaNode.addChild(TreeNode<String>(value: "Green"))
+        teaNode.addChild(TreeNode<String>(value: "Chai"))
+        
+        let coffeeNode = TreeNode<String>(value: "Coffee")
+        hotNode.addChild(coffeeNode)
+        
+        let chocolateNode = TreeNode<String>(value: "Cocoa")
+        hotNode.addChild(chocolateNode)
+        
+        let sodaNode = TreeNode<String>(value: "Soda")
+        coldNode.addChild(sodaNode)
+        sodaNode.addChild(TreeNode<String>(value: "Ginger Ale"))
+        sodaNode.addChild(TreeNode<String>(value: "Bitter Lemon"))
+        
+        let milkNode = TreeNode<String>(value: "Milk")
+        coldNode.addChild(milkNode)
+        
+        print("\n\n")
+        print(tree)
+//        tree.printChildren("Soda")
+        print(tree.search("Coffee"))
+        print("\n\n")
+    }
+    
+    func testRingBuffer() {
+        var ringBuffer = RingBuffer<Int>(count: 4)
+        ringBuffer.write(0)
+        ringBuffer.write(1)
+        ringBuffer.write(2)
+        ringBuffer.write(3)
+        print("\n")
+        print(ringBuffer)
+        print("\n")
+        for element in ringBuffer {
+            print("element: \(element)")
+        }
+        print("\n")
+        print(ringBuffer.read())
+        print(ringBuffer.read())
+        print(ringBuffer)
+        print("\n")
+        ringBuffer.write(4)
+        ringBuffer.write(5)
+        print(ringBuffer)
+        print("\n")
+        print(ringBuffer.read())
+        print(ringBuffer.read())
+        print(ringBuffer)
+        print("\n")
+        ringBuffer.write(6)
+        ringBuffer.write(7)
+        print(ringBuffer)
+        print("\n")
+        print(ringBuffer.read())
+        print(ringBuffer.read())
+        print(ringBuffer.read())
+        print(ringBuffer.read())
+        print(ringBuffer)
+        print("\n")
+    }
+    
+    func testBinaryTree() {
+        // (5 * (a - 10)) + (-4 * (3 / b))
+        // leaf nodes
+        let node5 = BinaryTree.node(.empty, "5", .empty)
+        let nodeA = BinaryTree.node(.empty, "a", .empty)
+        let node10 = BinaryTree.node(.empty, "10", .empty)
+        let node4 = BinaryTree.node(.empty, "4", .empty)
+        let node3 = BinaryTree.node(.empty, "3", .empty)
+        let nodeB = BinaryTree.node(.empty, "b", .empty)
+        
+        // nodes on the left
+        let aminus10 = BinaryTree.node(nodeA, "-", node10)
+        let timesLeft = BinaryTree.node(node5, "*", aminus10)
+        
+        // nodes on the right
+        let minus4 = BinaryTree.node(.empty, "-", node4)
+        let devided3andB = BinaryTree.node(node3, "/", nodeB)
+        let timesRight = BinaryTree.node(minus4, "*", devided3andB)
+        
+        // make root
+        let root = BinaryTree.node(timesLeft, "+", timesRight)
+        
+        print("\n\n")
+        print(root)
+        
+        
+        // ((1 + 2) / a) * (10 * b)
+        let _node1 = BinaryTreeNode<String>(value: "1")
+        let _node2 = BinaryTreeNode<String>(value: "2")
+        let _nodeA = BinaryTreeNode<String>(value: "a")
+        let _node10 = BinaryTreeNode<String>(value: "10")
+        let _nodeB = BinaryTreeNode<String>(value: "b")
+        
+        let onePlusTwo = BinaryTreeNode<String>(value: "+", left: _node1, right: _node2)
+        let devideLeft = BinaryTreeNode<String>(value: "/", left: onePlusTwo, right: _nodeA)
+        
+        let _timesRight = BinaryTreeNode<String>(value: "*", left: _node10, right: _nodeB)
+        
+        let root2 = BinaryTreeNode<String>(value: "*", left: devideLeft, right: _timesRight)
+        print("\n\n")
+        print(root2)
+        print("\nlevelOrder")
+        root2.traverseLevelOrder()
+        print("\npreOrder")
+        root2.traversePreOrder { (value) in
+            print(value)
+        }
+        print("\ninOrder")
+        root2.traverseInOrder{ print($0) }
+        print("\npostOrder")
+        root2.traversePostOrder{ print($0) }
+        print("\n\n")
+    }
+    
+    func testBST() {
+        print("\n\n")
+        //tree = [1, 3, 2, (5)<-root, 10, 8, 12]
+        let bst = BinarySearchTree<Int>(value: 10)
+        bst.insert(8); bst.insert(20); bst.insert(7); bst.insert(5); bst.insert(13)
+        bst.insert(3); bst.insert(31); bst.insert(16); bst.insert(18); bst.insert(37)
+        bst.insert(1); bst.insert(41)
+        print("bst: \(bst.debugDescription)"); print("\n")
+        print("search(8): \(bst.search(8))"); print("\n")
+        print("iterateSearch(8): \(bst.iterateSearch(8))"); print("\n")
+        print("min: \(bst.minimum().value)"); print("\n")
+        print("max: \(bst.maximum().value)"); print("\n")
+        print("preOrder")
+        bst.traversePreOrder{ print("\($0)") }; print("\n")
+        print("inOrder")
+        bst.traverseInOrder{ print("\($0)") }; print("\n")
+        print("postOrder")
+        bst.traversePostOrder{ print("\($0)") }; print("\n")
+        print("levelOrder")
+        bst.traverseLevelOrder(); print("\n")
+//        print("\n")
+//        print("18.successor: \(bst.successor(of: 18))") // 20
+//        print("\n")
+//        print("40.successor: \(bst.successor(of: 40))") // nil
+        print("\n\n")
+    }
+    
+    func testBST2() {
+        print("\n\n")
+        let tree = BinarySearchTree<Int>(value: 10)
+        tree.insert(5); tree.insert(12); tree.insert(3); tree.insert(7)
+        tree.insert(1); tree.insert(4); tree.insert(6); tree.insert(9)
+        tree.insert(14); tree.insert(15); tree.insert(16); tree.insert(21)
+        XCTAssertEqual(tree.count, 13)
+        XCTAssertEqual(tree.minimum().value, 1)
+        XCTAssertEqual(tree.maximum().value, 21)
+        XCTAssertNil(tree.search(100))
+        XCTAssertEqual(tree.toArray(), [1, 3, 4, 5, 6, 7, 9, 10, 12, 14, 15, 16, 21])
+        var node = tree.search(9)
+//        XCTAssertEqual(node.depth, 4)
+        XCTAssertEqual(node!.successor()!.value, 10)
+        node = tree.search(21)
+        XCTAssertEqual(node!.predecessor()!.value, 16)
+        print("\n\n")
+    }
+    
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
