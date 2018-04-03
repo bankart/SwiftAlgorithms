@@ -32,8 +32,6 @@ class SwiftAlgorithmsTests: XCTestCase {
         print()
         var memo = [Int: Int]()
         print(fib.sumWithMemoizationRecursion(input, memo: &memo))
-        print()
-        print(fib.sumWithLoop2(input))
         print("\n\n")
     }
     
