@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E325ED2B2048DF9F003FF7FE /* RingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325ED2A2048DF9F003FF7FE /* RingBuffer.swift */; };
-		E354451B204931380007BFC5 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E354451A204931380007BFC5 /* BinaryTree.swift */; };
-		E38C4C1120470415004099BF /* LinkedList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38C4C1020470415004099BF /* LinkedList2.swift */; };
-		E3F7F6AB204C0D9100DBF841 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7F6AA204C0D9100DBF841 /* BinarySearchTree.swift */; };
-		E3F842942047D43A00DA04EF /* LinkedList3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F842932047D43A00DA04EF /* LinkedList3.swift */; };
-		E3F8429720485DBD00DA04EF /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F8429620485DBD00DA04EF /* Tree.swift */; };
+		E304F7EA205971A3000DB048 /* CodeSnippets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E304F7E9205971A3000DB048 /* CodeSnippets.swift */; };
+		E3781E08205F8A0E0060B44C /* Palindromes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3781E07205F8A0E0060B44C /* Palindromes.swift */; };
+		E3781E0B205F98A20060B44C /* Permutations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3781E0A205F98A20060B44C /* Permutations.swift */; };
+		E385F38820513AE10028DD32 /* InsertionSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E385F38720513AE10028DD32 /* InsertionSorting.swift */; };
+		E3A8F4AF205BBCC200F8C383 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8F4AE205BBCC200F8C383 /* Utils.swift */; };
+		E3DC787D205D27220042A4B7 /* SampleForShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DC787C205D27220042A4B7 /* SampleForShare.swift */; };
+		E3E600AE206DE4F000DCD043 /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E600AD206DE4F000DCD043 /* Fibonacci.swift */; };
+		E3F6F57A2060F8FB003F3F21 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6F5792060F8FB003F3F21 /* Heap.swift */; };
 		E3F98EA920463F540049FD56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F98EA820463F540049FD56 /* AppDelegate.swift */; };
 		E3F98EAB20463F540049FD56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F98EAA20463F540049FD56 /* ViewController.swift */; };
 		E3F98EAE20463F540049FD56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F98EAC20463F540049FD56 /* Main.storyboard */; };
@@ -20,7 +22,6 @@
 		E3F98EB320463F540049FD56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F98EB120463F540049FD56 /* LaunchScreen.storyboard */; };
 		E3F98EBE20463F550049FD56 /* SwiftAlgorithmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F98EBD20463F550049FD56 /* SwiftAlgorithmsTests.swift */; };
 		E3F98EC920463F550049FD56 /* SwiftAlgorithmsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F98EC820463F550049FD56 /* SwiftAlgorithmsUITests.swift */; };
-		E3F98ED820463F980049FD56 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F98ED720463F980049FD56 /* LinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,12 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E325ED2A2048DF9F003FF7FE /* RingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingBuffer.swift; sourceTree = "<group>"; };
-		E354451A204931380007BFC5 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
-		E38C4C1020470415004099BF /* LinkedList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList2.swift; sourceTree = "<group>"; };
-		E3F7F6AA204C0D9100DBF841 /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
-		E3F842932047D43A00DA04EF /* LinkedList3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList3.swift; sourceTree = "<group>"; };
-		E3F8429620485DBD00DA04EF /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		E304F7E9205971A3000DB048 /* CodeSnippets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnippets.swift; sourceTree = "<group>"; };
+		E3781E07205F8A0E0060B44C /* Palindromes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palindromes.swift; sourceTree = "<group>"; };
+		E3781E0A205F98A20060B44C /* Permutations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permutations.swift; sourceTree = "<group>"; };
+		E385F38720513AE10028DD32 /* InsertionSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSorting.swift; sourceTree = "<group>"; };
+		E3A8F4AE205BBCC200F8C383 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		E3DC787C205D27220042A4B7 /* SampleForShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleForShare.swift; sourceTree = "<group>"; };
+		E3E600AD206DE4F000DCD043 /* Fibonacci.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
+		E3F6F5792060F8FB003F3F21 /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		E3F98EA520463F540049FD56 /* SwiftAlgorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftAlgorithms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F98EA820463F540049FD56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F98EAA20463F540049FD56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +63,6 @@
 		E3F98EC420463F550049FD56 /* SwiftAlgorithmsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftAlgorithmsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F98EC820463F550049FD56 /* SwiftAlgorithmsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAlgorithmsUITests.swift; sourceTree = "<group>"; };
 		E3F98ECA20463F550049FD56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3F98ED720463F980049FD56 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,32 +90,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E325ED292048DF8D003FF7FE /* RingBuffer */ = {
+		E304F7E820597185000DB048 /* SmipleCodes */ = {
 			isa = PBXGroup;
 			children = (
-				E325ED2A2048DF9F003FF7FE /* RingBuffer.swift */,
+				E304F7E9205971A3000DB048 /* CodeSnippets.swift */,
+				E3DC787C205D27220042A4B7 /* SampleForShare.swift */,
 			);
-			path = RingBuffer;
+			path = SmipleCodes;
 			sourceTree = "<group>";
 		};
-		E3F842922047D40B00DA04EF /* LinkedList */ = {
+		E3781E06205F89EE0060B44C /* Palindromes */ = {
 			isa = PBXGroup;
 			children = (
-				E3F98ED720463F980049FD56 /* LinkedList.swift */,
-				E38C4C1020470415004099BF /* LinkedList2.swift */,
-				E3F842932047D43A00DA04EF /* LinkedList3.swift */,
+				E3781E07205F8A0E0060B44C /* Palindromes.swift */,
 			);
-			path = LinkedList;
+			path = Palindromes;
 			sourceTree = "<group>";
 		};
-		E3F8429520485DAB00DA04EF /* Tree */ = {
+		E3781E09205F987F0060B44C /* Combinatorics */ = {
 			isa = PBXGroup;
 			children = (
-				E3F8429620485DBD00DA04EF /* Tree.swift */,
-				E354451A204931380007BFC5 /* BinaryTree.swift */,
-				E3F7F6AA204C0D9100DBF841 /* BinarySearchTree.swift */,
+				E3781E0A205F98A20060B44C /* Permutations.swift */,
 			);
-			path = Tree;
+			path = Combinatorics;
+			sourceTree = "<group>";
+		};
+		E385F38620513ACB0028DD32 /* Sorting */ = {
+			isa = PBXGroup;
+			children = (
+				E385F38720513AE10028DD32 /* InsertionSorting.swift */,
+			);
+			path = Sorting;
+			sourceTree = "<group>";
+		};
+		E3A8F4AD205BBCAF00F8C383 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E3A8F4AE205BBCC200F8C383 /* Utils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		E3E600AC206DE4D800DCD043 /* Fibonacci */ = {
+			isa = PBXGroup;
+			children = (
+				E3E600AD206DE4F000DCD043 /* Fibonacci.swift */,
+			);
+			path = Fibonacci;
+			sourceTree = "<group>";
+		};
+		E3F6F5782060F8DB003F3F21 /* Heap */ = {
+			isa = PBXGroup;
+			children = (
+				E3F6F5792060F8FB003F3F21 /* Heap.swift */,
+			);
+			path = Heap;
 			sourceTree = "<group>";
 		};
 		E3F98E9C20463F540049FD56 = {
@@ -139,7 +170,13 @@
 		E3F98EA720463F540049FD56 /* SwiftAlgorithms */ = {
 			isa = PBXGroup;
 			children = (
-				E3F98ED620463F6C0049FD56 /* datastructures */,
+				E3E600AC206DE4D800DCD043 /* Fibonacci */,
+				E3F6F5782060F8DB003F3F21 /* Heap */,
+				E3781E09205F987F0060B44C /* Combinatorics */,
+				E3781E06205F89EE0060B44C /* Palindromes */,
+				E304F7E820597185000DB048 /* SmipleCodes */,
+				E385F38620513ACB0028DD32 /* Sorting */,
+				E3A8F4AD205BBCAF00F8C383 /* utils */,
 				E3F98EA820463F540049FD56 /* AppDelegate.swift */,
 				E3F98EAA20463F540049FD56 /* ViewController.swift */,
 				E3F98EAC20463F540049FD56 /* Main.storyboard */,
@@ -166,16 +203,6 @@
 				E3F98ECA20463F550049FD56 /* Info.plist */,
 			);
 			path = SwiftAlgorithmsUITests;
-			sourceTree = "<group>";
-		};
-		E3F98ED620463F6C0049FD56 /* datastructures */ = {
-			isa = PBXGroup;
-			children = (
-				E325ED292048DF8D003FF7FE /* RingBuffer */,
-				E3F8429520485DAB00DA04EF /* Tree */,
-				E3F842922047D40B00DA04EF /* LinkedList */,
-			);
-			path = datastructures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +268,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "taehoon lee";
 				TargetAttributes = {
 					E3F98EA420463F540049FD56 = {
@@ -312,15 +339,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E354451B204931380007BFC5 /* BinaryTree.swift in Sources */,
-				E3F842942047D43A00DA04EF /* LinkedList3.swift in Sources */,
-				E3F98ED820463F980049FD56 /* LinkedList.swift in Sources */,
-				E38C4C1120470415004099BF /* LinkedList2.swift in Sources */,
-				E3F8429720485DBD00DA04EF /* Tree.swift in Sources */,
-				E3F7F6AB204C0D9100DBF841 /* BinarySearchTree.swift in Sources */,
+				E3781E08205F8A0E0060B44C /* Palindromes.swift in Sources */,
+				E3E600AE206DE4F000DCD043 /* Fibonacci.swift in Sources */,
+				E304F7EA205971A3000DB048 /* CodeSnippets.swift in Sources */,
+				E3A8F4AF205BBCC200F8C383 /* Utils.swift in Sources */,
+				E3781E0B205F98A20060B44C /* Permutations.swift in Sources */,
 				E3F98EAB20463F540049FD56 /* ViewController.swift in Sources */,
-				E325ED2B2048DF9F003FF7FE /* RingBuffer.swift in Sources */,
+				E3F6F57A2060F8FB003F3F21 /* Heap.swift in Sources */,
+				E385F38820513AE10028DD32 /* InsertionSorting.swift in Sources */,
 				E3F98EA920463F540049FD56 /* AppDelegate.swift in Sources */,
+				E3DC787D205D27220042A4B7 /* SampleForShare.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +417,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -396,6 +425,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -446,6 +476,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -453,6 +484,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

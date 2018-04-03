@@ -10,12 +10,9 @@ import XCTest
 @testable import SwiftAlgorithms
 
 class SwiftAlgorithmsTests: XCTestCase {
-    var linkedList: LinkedList<String>!
-    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        linkedList = LinkedList<String>()
     }
     
     override func tearDown() {
@@ -23,355 +20,223 @@ class SwiftAlgorithmsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testLinkedList() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        print("linkedList.isEmpty: \(linkedList.isEmpty)") // true
-        print("linkedList.first: \(linkedList.first)") // nil
-        linkedList.append("Hello")
-        print("linkedList.isEmpty: \(linkedList.isEmpty)") // false
-        print("linkedList.first: \(linkedList.first!.value)") // Hello
-        print("linkedList.last: \(linkedList.last!.value)") // Hello
-//        linkedList.append("World")
-        var node = LinkedListNode(value: "World")
-        linkedList.append(node)
-        print("linkedList.first: \(linkedList.first!.value)") // Hello
-        print("linkedList.last: \(linkedList.last!.value)") // World
-        print("linkedList.first!.previous: \(linkedList.first!.previous)") // nil
-        print("linkedList.first!.next!.value: \(linkedList.first!.next!.value)") //World
-        print("linkedList.last!.previous!.value: \(linkedList.last!.previous!.value)") // Hello
-        print("linkedList.last!.next: \(linkedList.last!.next)") // nil
-        print("linkedList.count: \(linkedList.count)")
-        print("linkedList.node(at: 0).value: \(linkedList.node(at: 0).value)")
-        print("linkedList.node(at: 1).value: \(linkedList.node(at: 1).value)")
-//        print("linkedList.node(at: 2).value: \(linkedList.node(at: 2).value)") // crash
-        linkedList.insert("Swift", at: 1)
-        print("linkedList[0]: \(linkedList[0])")
-        print("linkedList[1]: \(linkedList[1])")
-        print("linkedList[2]: \(linkedList[2])")
-        linkedList.remove(at: 1)
-        node = LinkedListNode(value: "'Swift'")
-        linkedList.insert(node, at: 1)
-        print("linkedList[0]: \(linkedList[0])")
-        print("linkedList[1]: \(linkedList[1])")
-        print("linkedList[2]: \(linkedList[2])")
+    func testFibonacci() {
+        print("\n\n")
+        let input = 2
+        print(Fibonacci.numberWithLoop(input))
+        print()
+        print(Fibonacci.numberWithRecursion(input, first: 0, second: 1))
+        print()
+        let fib = Fibonacci()
+        print(fib.sumWithLoop(input))
+        print()
+        var memo = [Int: Int]()
+        print(fib.sumWithMemoizationRecursion(input, memo: &memo))
+        print()
+        print(fib.sumWithLoop2(input))
+        print("\n\n")
     }
     
-    func testLinkedList2() {
-        print("\n\n\(#function)")
-        let list0 = LinkedList<String>()
-        list0.append("0")
-        list0.append("1")
-        list0.append(LinkedListNode(value: "2"))
-        print("================================")
-        
-        print("list0[0]: \(list0[0])")
-        print("list0[1]: \(list0[1])")
-        print("list0[2]: \(list0[2])")
-        
-        let list1 = LinkedList<String>()
-        list1.append(list0)
-        
-        print("================================")
-        
-        let list2 = LinkedList<String>()
-        list2.append("10")
-        list2.append("11")
-        list2.append("12")
-        
-        list1.insert(list2, at: 1)
-        
-        print("list1[0]: \(list1[0])")
-        print("list1[1]: \(list1[1])")
-        print("list1[2]: \(list1[2])")
-        print("list1[3]: \(list1[3])")
-        print("list1[4]: \(list1[4])")
-        print("list1[5]: \(list1[5])")
-        
-        print("\(#function)\n\n")
-    }
     
-    func testLinkedList3() {
-        let list: LinkedList2<String> = ["0", "1", "2", "3"]
-//        for node in list {
-//            print("node: \(node.value)")
-//        }
-        print("list.count: \(list.count)")
-        print("====================================")
-//        list.reverse()
-//        for node in list {
-//            print("reverse().node: \(node.value)")
-//        }
-        
-        list.remove(at: 1)
-        print("list.count: \(list.count)")
-        print("list: \(list)")
-        list.removeLast()
-        print("list.count: \(list.count)")
-        print("list: \(list)")
-        list.append("100")
-        print("list.count: \(list.count)")
-        print("list: \(list)")
-        list.insert("50", at: list.count - 1)
-        print("list.count: \(list.count)")
-        print("list: \(list)")
-        let modifiedList = list.map{ "{\($0)}" }
-        print("list: \(modifiedList)")
-    }
     
-    func testLinkedList4() {
-        let list = LinkedList3<Int>()
-        list.append(0)
-        list.append(1)
-        list.append(2)
-        list.append(3)
-//        print("\n")
-//        for i in 0..<list.count {
-//            print("list[\(i)]: \(list[i])")
-//        }
-        list.insert(-1, at: 0)
-//        print("list.last: \(list.last!.value), tail: \(list.tail!.value)")
-//        print("\n")
-        list.append(100)
-//        for i in 0..<list.count {
-//            print("list[\(i)]: \(list[i])")
-//        }
-//        print("list.last: \(list.last!.value), tail: \(list.tail!.value)")
-//        print("\n")
-        list.insert(30, at: list.count-1)
-//        for i in 0..<list.count {
-//            print("list[\(i)]: \(list[i])")
-//        }
-//        print("list.last: \(list.last!.value), tail: \(list.tail!.value)")
-//        print("\n")
-        
-        let newList = LinkedList3<Int>()
-        for i in stride(from: 10, to: 30, by: 6) {
-            newList.append(i)
+    func testTimeComplexity() {
+        print("\n\n")
+        let arr1 = [0, 1, 2, 3, 4, 5, 6]
+        let arr2 = [10, 20, 30, 40, 50, 60, 70, 80]
+        print("각 원소에 접근하는 연산 시간은 개당 1회")
+        print("arr1.count: \(arr1.count), O(1)")
+        for i in 0..<arr1.count {
+            print("\(arr1[i]) - \(i)")
         }
-//        for i in 0..<newList.count {
-//            print("newList[\(i)]: \(newList[i])")
-//        }
-        
-        print("\n")
-//        list.append(newList)
-////        print("list.head: \(list.head!.value), first: \(list.first!.value)")
-////        print("list.last: \(list.last!.value), tail: \(list.tail!.value)")
-//        for i in 0..<list.count {
-//            print("list[\(i)]: \(list[i])")
-//        }
-////        print("list.last: \(list.last!.value), tail: \(list.tail!.value)")
-        
-        list.insert(newList, at: list.count - 2)
-//        for i in 0..<list.count {
-//            print("list[\(i)]: \(list[i])")
-//        }
-//        print("\n")
-        
-        list.remove(list.node(at: 1))
-//        for i in 0..<list.count {
-//            print("list[\(i)]: \(list[i])")
-//        }
-//        print("\n")
-        
-        list.remove(at: 0)
-//        for i in 0..<list.count {
-//            print("list[\(i)]: \(list[i])")
-//        }
-//        print("\n")
-        
-        list.removeLast()
-        for i in 0..<list.count {
-            print("list[\(i)]: \(list[i])")
+        print("arr2.count: \(arr2.count), O(1)")
+        for i in 0..<arr2.count {
+            print("\(arr2[i]) - \(i)")
         }
         print("\n")
         
-        list.reverse()
-        print("list.head: \(list.head!.value), tail: \(list.tail!.value)")
-        for i in 0..<list.count {
-            print("list[\(i)]: \(list[i])")
+        var counting: Int = 0
+        print("arr1 의 원소 1개당 arr2 의 원소 전체 갯수만큼 반복")
+        print("arr1.count: \(arr1.count), arr2.count: \(arr2.count), O(2n) = O(\(arr1.count)*\(arr2.count))")
+        for i in 0..<arr1.count {
+            for j in 0..<arr2.count {
+                counting += 1
+                print("\(arr1[i])_\(arr2[j]) - \(counting)")
+            }
         }
         print("\n")
-        print(list)
-        print("startIndex: \(list.startIndex)")
-        print("endIndex: \(list.endIndex)")
-        let secondIndex = list.index(after: list.startIndex)
-        print("secondIndex: \(secondIndex)")
-        print("")
+        print("arr1 의 원소 1개당 arr2 의 원소 전체 갯수만큼 순환하고 그 안에서 다시 1000번 더 반복하더라도 1000은 상수항이므로 무시하고 결국 O(3n) 이 된다.")
+        print("3n = \(arr1.count)*\(arr2.count)*\(1000) = \(arr1.count * arr2.count * 1000)")
+        for i in 0..<arr1.count {
+            for j in 0..<arr2.count {
+                for k in 0..<1000{
+                    counting += 1
+                }
+            }
+        }
+        print("counting: \(counting)")
         print("\n")
-    }
-    
-    func testTree() {
-        let tree = TreeNode<String>(value: "Beverages")
-        let hotNode = TreeNode<String>(value: "Hot")
-        let coldNode = TreeNode<String>(value: "Cold")
-        tree.addChild(hotNode)
-        tree.addChild(coldNode)
         
-        let teaNode = TreeNode<String>(value: "Tea")
-        hotNode.addChild(teaNode)
-        teaNode.addChild(TreeNode<String>(value: "Black"))
-        teaNode.addChild(TreeNode<String>(value: "Green"))
-        teaNode.addChild(TreeNode<String>(value: "Chai"))
         
-        let coffeeNode = TreeNode<String>(value: "Coffee")
-        hotNode.addChild(coffeeNode)
-        
-        let chocolateNode = TreeNode<String>(value: "Cocoa")
-        hotNode.addChild(chocolateNode)
-        
-        let sodaNode = TreeNode<String>(value: "Soda")
-        coldNode.addChild(sodaNode)
-        sodaNode.addChild(TreeNode<String>(value: "Ginger Ale"))
-        sodaNode.addChild(TreeNode<String>(value: "Bitter Lemon"))
-        
-        let milkNode = TreeNode<String>(value: "Milk")
-        coldNode.addChild(milkNode)
-        
-        print("\n\n")
-        print(tree)
-//        tree.printChildren("Soda")
-        print(tree.search("Coffee"))
-        print("\n\n")
-    }
-    
-    func testRingBuffer() {
-        var ringBuffer = RingBuffer<Int>(count: 4)
-        ringBuffer.write(0)
-        ringBuffer.write(1)
-        ringBuffer.write(2)
-        ringBuffer.write(3)
-        print("\n")
-        print(ringBuffer)
-        print("\n")
-        for element in ringBuffer {
-            print("element: \(element)")
+        counting = 0
+        print("동일 배열을 이중 loop 로 접근시 O(n^2)")
+        print("arr1.count: \(arr1.count), O(\(arr1.count)^\(arr1.count))")
+        for i in 0..<arr1.count {
+            for j in 0..<arr1.count {
+                counting += 1
+                print("\(arr1[i]) + \(arr1[j]) = \(arr1[i] + arr1[j]) - \(counting)")
+            }
         }
         print("\n")
-        print(ringBuffer.read())
-        print(ringBuffer.read())
-        print(ringBuffer)
-        print("\n")
-        ringBuffer.write(4)
-        ringBuffer.write(5)
-        print(ringBuffer)
-        print("\n")
-        print(ringBuffer.read())
-        print(ringBuffer.read())
-        print(ringBuffer)
-        print("\n")
-        ringBuffer.write(6)
-        ringBuffer.write(7)
-        print(ringBuffer)
-        print("\n")
-        print(ringBuffer.read())
-        print(ringBuffer.read())
-        print(ringBuffer.read())
-        print(ringBuffer.read())
-        print(ringBuffer)
-        print("\n")
-    }
-    
-    func testBinaryTree() {
-        // (5 * (a - 10)) + (-4 * (3 / b))
-        // leaf nodes
-        let node5 = BinaryTree.node(.empty, "5", .empty)
-        let nodeA = BinaryTree.node(.empty, "a", .empty)
-        let node10 = BinaryTree.node(.empty, "10", .empty)
-        let node4 = BinaryTree.node(.empty, "4", .empty)
-        let node3 = BinaryTree.node(.empty, "3", .empty)
-        let nodeB = BinaryTree.node(.empty, "b", .empty)
         
-        // nodes on the left
-        let aminus10 = BinaryTree.node(nodeA, "-", node10)
-        let timesLeft = BinaryTree.node(node5, "*", aminus10)
-        
-        // nodes on the right
-        let minus4 = BinaryTree.node(.empty, "-", node4)
-        let devided3andB = BinaryTree.node(node3, "/", nodeB)
-        let timesRight = BinaryTree.node(minus4, "*", devided3andB)
-        
-        // make root
-        let root = BinaryTree.node(timesLeft, "+", timesRight)
-        
-        print("\n\n")
-        print(root)
-        
-        
-        // ((1 + 2) / a) * (10 * b)
-        let _node1 = BinaryTreeNode<String>(value: "1")
-        let _node2 = BinaryTreeNode<String>(value: "2")
-        let _nodeA = BinaryTreeNode<String>(value: "a")
-        let _node10 = BinaryTreeNode<String>(value: "10")
-        let _nodeB = BinaryTreeNode<String>(value: "b")
-        
-        let onePlusTwo = BinaryTreeNode<String>(value: "+", left: _node1, right: _node2)
-        let devideLeft = BinaryTreeNode<String>(value: "/", left: onePlusTwo, right: _nodeA)
-        
-        let _timesRight = BinaryTreeNode<String>(value: "*", left: _node10, right: _nodeB)
-        
-        let root2 = BinaryTreeNode<String>(value: "*", left: devideLeft, right: _timesRight)
-        print("\n\n")
-        print(root2)
-        print("\nlevelOrder")
-        root2.traverseLevelOrder()
-        print("\npreOrder")
-        root2.traversePreOrder { (value) in
-            print(value)
+        counting = 0
+        print("n(n-1)/2 => O(n^2)")
+        print("j 가 i 보다 큰 모든 (i, j) 쌍을 반복. 결과를 보면 (n^2)/2 의 행렬로 보인다.")
+        for i in 0..<arr1.count {
+            for j in stride(from: i+1, to: arr1.count, by: 1) {
+                counting += 1
+                print("\(arr1[i]) + \(arr1[j]) = \(arr1[i] + arr1[j]) - \(counting)")
+            }
         }
-        print("\ninOrder")
-        root2.traverseInOrder{ print($0) }
-        print("\npostOrder")
-        root2.traversePostOrder{ print($0) }
+        print("\n")
+        
+        counting = 1
+        func foo(n: Int) -> Int {
+            counting += 1
+            if n <= 1 { return 1 }
+            return foo(n: n-1) + foo(n: n-1)
+        }
+        let initValue = 4
+        print(foo(n: initValue))
+        print("func foo(:)'s time complexity: O(2^n) = O(2^\(initValue)) = \(counting)")
+        
         print("\n\n")
     }
     
-    func testBST() {
+    func testTimeComplexity2() {
+        var strArray = ["abc", "ab", "abcde", "a"]
+        print("strArray: \(strArray)")
+        print(strArray.sorted { (str0, str1) -> Bool in
+            str0.count < str1.count
+        })
+        
+        func sortForLength(arr: inout [String]) {
+            for x in 1..<arr.count {
+                var y = x
+                print("x: \(x)")
+                while y > 0 && arr[y].count > arr[y - 1].count {
+                    print("y: \(y), arr[\(y)](\(arr[y].count)) > arr[y-1](\(arr[y-1].count))")
+                    arr.swapAt(y - 1, y)
+                    y -= 1
+                }
+            }
+        }
+        sortForLength(arr: &strArray)
+        print("after sorting for length > strArray: \(strArray)")
+    }
+    
+    func testSorting() {
         print("\n\n")
-        //tree = [1, 3, 2, (5)<-root, 10, 8, 12]
-        let bst = BinarySearchTree<Int>(value: 10)
-        bst.insert(8); bst.insert(20); bst.insert(7); bst.insert(5); bst.insert(13)
-        bst.insert(3); bst.insert(31); bst.insert(16); bst.insert(18); bst.insert(37)
-        bst.insert(1); bst.insert(41)
-        print("bst: \(bst.debugDescription)"); print("\n")
-        print("search(8): \(bst.search(8))"); print("\n")
-        print("iterateSearch(8): \(bst.iterateSearch(8))"); print("\n")
-        print("min: \(bst.minimum().value)"); print("\n")
-        print("max: \(bst.maximum().value)"); print("\n")
-        print("preOrder")
-        bst.traversePreOrder{ print("\($0)") }; print("\n")
-        print("inOrder")
-        bst.traverseInOrder{ print("\($0)") }; print("\n")
-        print("postOrder")
-        bst.traversePostOrder{ print("\($0)") }; print("\n")
-        print("levelOrder")
-        bst.traverseLevelOrder(); print("\n")
+        let sorting = Sorting()
+        sorting.execute()
+        print("\n\n")
+    }
+    
+    func testSnippets() {
+        print("\n\n")
+        let number = 7
+        if Snippets.isPrime(number) {
+            print("\(number) is prime")
+        } else {
+            print("\(number) is not a prime")
+        }
+        var num = 20
+        print("\(num).factorial() = \(num.factorial())")
+        num = 21
+        print("\(num).factorial() = \(num.anotherFatorial(21))")
 //        print("\n")
-//        print("18.successor: \(bst.successor(of: 18))") // 20
+//        Snippets.permutation("string")
 //        print("\n")
-//        print("40.successor: \(bst.successor(of: 40))") // nil
+//        print(Snippets.allFib(10))
+//        print("\n")
+//        print("root(4) = \(sqrt(4))")
         print("\n\n")
     }
     
-    func testBST2() {
+    func testProtocol() {
         print("\n\n")
-        let tree = BinarySearchTree<Int>(value: 10)
-        tree.insert(5); tree.insert(12); tree.insert(3); tree.insert(7)
-        tree.insert(1); tree.insert(4); tree.insert(6); tree.insert(9)
-        tree.insert(14); tree.insert(15); tree.insert(16); tree.insert(21)
-        XCTAssertEqual(tree.count, 13)
-        XCTAssertEqual(tree.minimum().value, 1)
-        XCTAssertEqual(tree.maximum().value, 21)
-        XCTAssertNil(tree.search(100))
-        XCTAssertEqual(tree.toArray(), [1, 3, 4, 5, 6, 7, 9, 10, 12, 14, 15, 16, 21])
-        var node = tree.search(9)
-//        XCTAssertEqual(node.depth, 4)
-        XCTAssertEqual(node!.successor()!.value, 10)
-        node = tree.search(21)
-        XCTAssertEqual(node!.predecessor()!.value, 16)
+        makeSome()
+        print("\n")
+        makeGenericProtocol()
+        print("\n")
+        testMonad()
         print("\n\n")
     }
     
+    func testPalindromes() {
+        print("\n\n")
+        let str = "ra?ce*Car"
+        print("\(str) is palindrome? \(str.isPalindrome())")
+        print()
+        let str2 = "akazcka"
+        print("\(str2) is palindrome? \(str2.isPalindrome())")
+//        Palindromes.isPalindrome(str)
+        print("\n\n")
+    }
+    
+    func testPermutation() {
+        var util = Permutations()
+        let arr = ["a", "b", "c"]
+        util.permuteWirth(arr, arr.count - 1)
+    }
+    
+    func testHeap() {
+        print("\n\n")
+        let nodes = [2, 8, 6, 1, 10, 15, 3, 12, 11]
+        print("original: \(nodes)\n")
+        
+//        let heap = Heap<Int>(array: nodes, sort:<)
+//        print("heap.nodes: \(heap.nodes)")
+//
+//        var heap2 = Heap2<Int>(array:nodes, comparator:<)
+//        print("heap2.elements: \(heap2.elements)")
+        
+        
+        var _nodes = nodes
+        func heapify(from index: Int, until endIndex: Int) {
+            
+            let leftChildIndex = (index * 2) + 1
+            let rightChildIndex = leftChildIndex + 1
+            var first = index
+            
+            if leftChildIndex < endIndex && _nodes[leftChildIndex] < _nodes[index] {
+                first = leftChildIndex
+            }
+            if rightChildIndex < endIndex && _nodes[rightChildIndex] < _nodes[index] {
+                if _nodes[rightChildIndex] < _nodes[leftChildIndex] {
+                    first = rightChildIndex
+                }
+            }
+            
+            if first == index {
+                print("     finished heapify for nodes[\(index)] = \(_nodes[index])")
+                print("     result: \(_nodes)\n")
+                return
+            }
+            // 자식이랑 자신의 위치를 바꿈
+            _nodes.swapAt(first, index)
+            print("  > swap(\(first){\(_nodes[first])}, \(index){\(_nodes[index])}")
+            heapify(from: first, until: endIndex)
+        }
+        
+        print("\nstart heapify\n")
+        for i in stride(from: (nodes.count/2)-1, through: 0, by: -1) {
+            print("call heapify: \(i)")
+            heapify(from: i, until: _nodes.count)
+        }
+        print()
+        print("max heap: \(_nodes)")
+        print("\n\n")
+    }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
