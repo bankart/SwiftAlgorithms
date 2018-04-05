@@ -160,15 +160,15 @@ class SwiftAlgorithmsTests: XCTestCase {
         print("\n\n")
     }
     
-    func testProtocol() {
-        print("\n\n")
-        makeSome()
-        print("\n")
-        makeGenericProtocol()
-        print("\n")
-        testMonad()
-        print("\n\n")
-    }
+//    func testProtocol() {
+//        print("\n\n")
+//        makeSome()
+//        print("\n")
+//        makeGenericProtocol()
+//        print("\n")
+//        testMonad()
+//        print("\n\n")
+//    }
     
     func testPalindromes() {
         print("\n\n")
