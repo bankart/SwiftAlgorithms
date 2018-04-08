@@ -97,3 +97,53 @@ extension String {
         return reversed
     }
 }
+
+struct SampleData {
+    private static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    private static let ArchiveURL = DocumentsDirectory.appendingPathComponent("sampleData")
+    
+    private static let LINEAR_INT_LIST = "linearIntList"
+    private static let RANDOM_INT_LIST = "RandomIntList"
+    private static var datas: [String: [Int]]?
+    
+    static private func getRandomList(_ count: Int) -> [Int] {
+        var input = [Int]()
+        for _ in 0..<count {
+            input.append(Int(arc4random_uniform(UInt32(count))))
+        }
+        return input
+    }
+    
+    static private func getLinearList(_ count: Int) -> [Int] {
+        var input = [Int]()
+        for i in 0..<count {
+            input.append(i)
+        }
+        return input
+    }
+    
+    static private func getIntList() {
+        if let savedList = NSKeyedUnarchiver.unarchiveObject(withFile: SampleData.ArchiveURL.path) as? [String: [Int]] {
+            datas = savedList
+        }
+    }
+    
+    
+    static func getIntList(_ isRandomList: Bool) -> [Int]? {
+        return isRandomList ? datas?[SampleData.RANDOM_INT_LIST] : datas?[SampleData.LINEAR_INT_LIST]
+    }
+    
+    static func makeSampleDatas(_ dataCount: Int) {
+        getIntList()
+        if datas == nil {
+            datas = [String: [Int]]()
+            datas![SampleData.RANDOM_INT_LIST] = getRandomList(dataCount)
+            datas![SampleData.LINEAR_INT_LIST] = getLinearList(dataCount)
+            
+            let isSuccess = NSKeyedArchiver.archiveRootObject(datas!, toFile: SampleData.ArchiveURL.path)
+            print("sample \(dataCount) datas saved: \(isSuccess ? "success" : "fail")")
+        } else {
+            print("sample \(dataCount) datas restored")
+        }
+    }
+}

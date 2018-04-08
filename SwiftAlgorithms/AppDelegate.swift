@@ -43,6 +43,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let start = Date.timeIntervalSinceReferenceDate
+        SampleData.makeSampleDatas(100000)
+        let finish = Date.timeIntervalSinceReferenceDate
+        print("make sample data estimated: \(finish - start)")
         return true
     }
 

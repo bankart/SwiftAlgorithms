@@ -58,6 +58,8 @@ struct Palindromes {
 extension String {
     @discardableResult
     func isPalindrome() -> Bool {
+        // 알파벳이 아닌 문자를 제거해야 하는 경우 아래처리 추가해야 하고, 그렇지 않으면 그냥 진행해야 한다. 출제자에게 확인필요.
+        // 대소문자 구별에 대한 것도 확인 필요
         let strippedString = self.replacingOccurrences(of: "\\W", with: "", options: .regularExpression, range: nil)
         let length = strippedString.count
         print("origin: \(self)(\(count)), remove non-word pattern: \(strippedString)(\(length))")

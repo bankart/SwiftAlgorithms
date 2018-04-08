@@ -22,7 +22,7 @@ class SwiftAlgorithmsTests: XCTestCase {
     
     func testFibonacci() {
         print("\n\n")
-        let input = 2
+        let input = 5
         print(Fibonacci.numberWithLoop(input))
         print()
         print(Fibonacci.numberWithRecursion(input, first: 0, second: 1))
@@ -32,10 +32,30 @@ class SwiftAlgorithmsTests: XCTestCase {
         print()
         var memo = [Int: Int]()
         print(fib.sumWithMemoizationRecursion(input, memo: &memo))
+        
+        print()
+        memo = [Int: Int]()
+        func numberOfFib(_ index: Int, memo: inout [Int: Int]) -> Int {
+            guard index > 1 else {
+                if index == 1 {                
+                    memo[index] = index
+                }
+                return index
+            }
+            if memo[index] != nil { return memo[index]! }
+            memo[index] = numberOfFib(index - 1, memo: &memo) + numberOfFib(index - 2, memo: &memo)
+            return memo[index]!
+        }
+        let result = numberOfFib(5, memo: &memo)
+        print("fibonacci numbers: \(memo.values.sorted())")
+        print("fibonacci number of 5: \(result)")
         print("\n\n")
     }
     
-    
+    func testQuiz() {
+        GoogleWorks.findPairOfSum()
+        testSample1()
+    }
     
     func testTimeComplexity() {
         print("\n\n")
@@ -134,8 +154,98 @@ class SwiftAlgorithmsTests: XCTestCase {
     
     func testSorting() {
         print("\n\n")
-        let sorting = Sorting()
-        sorting.execute()
+        // let input = [10, 7, 3, 12, 9, 5, 1]
+        let input = SampleData.getIntList(true)!.filter{ $0 % 100 == 0 }//[1, 7, 3, 8, 12, 9, 5, 14]
+        let sort = InsertionSort()
+        print("input.count: \(input.count)")
+        print()
+        let startTime0 = Date.timeIntervalSinceReferenceDate
+        var _ = sort.execute(input, comparison: >)
+        let endTime0 = Date.timeIntervalSinceReferenceDate
+        print("insertion sort \(endTime0 - startTime0)s")
+//        print()
+//        output = sort.execute(input, comparison: <)
+//        print("output: \(output)")
+        print("\n\n")
+    }
+    
+    func testSorting2() {
+        print("\n\n")
+        let input = SampleData.getIntList(true)!.filter{ $0 % 250 == 0 }//[31, 8, 48, 73, 11, 3, 20, 29, 65, 15]
+        print("input.count: \(input.count)")
+        let sort = BubbleSort()
+        let startTime0 = Date.timeIntervalSinceReferenceDate
+        var _ = sort.execute(input, comparison: >)
+        let endTime0 = Date.timeIntervalSinceReferenceDate
+        print("bubble sort \(endTime0 - startTime0)s")
+//        print()
+//        output = sort.execute(input, comparison: <)
+//        print("output: \(output)")
+        print("\n\n")
+    }
+    
+    func testSorting3() {
+        print("\n\n")
+        let input = SampleData.getIntList(true)!//[31, 8, 48, 73, 11, 3, 20, 29, 65, 15]
+        print("input.count: \(input.count)")
+        print()
+        let sort = MergeSort()
+        let startTime0 = Date.timeIntervalSinceReferenceDate
+        let _ = sort.execute(input)
+        let endTime0 = Date.timeIntervalSinceReferenceDate
+        print("merge sort \(endTime0 - startTime0)s")
+        print("\n\n")
+    }
+    
+    func testSorting4() {
+        print("\n\n")
+//        var input = [31, 8, 48, 73, 11, 3, 20, 29, 65, 15]
+        var input = SampleData.getIntList(true)!// [31, 8]
+        print("input.count: \(input.count)")
+        let sort = QuickSort()
+        
+        let startTime0 = Date.timeIntervalSinceReferenceDate
+        let _ = sort.execute(input)
+        let endTime0 = Date.timeIntervalSinceReferenceDate
+        print("use high-ordered function and recursion, quick sort \(endTime0 - startTime0)s")
+        print()
+        
+        let startTime1 = Date.timeIntervalSinceReferenceDate
+        sort.execute2(&input)
+        let endTime1 = Date.timeIntervalSinceReferenceDate
+        print("use inout property, partition method and recursion, quick sort \(endTime1 - startTime1)s")
+        
+        print("\n\n")
+    }
+    
+    func testSorting5() {
+        print("\n\n")
+        var results = [(Double, Double, Double)]()
+        for i in 0..<10 {
+            let result = BinarySearch.execute()
+            print("test \(i): \r\tbinarySearchRecursively - \(result.0), binarySearchLoop - \(result.1), linear: \(result.2)")
+            results.append(result)
+        }
+        var binarySearchRecursively: Double = 0, binarySearchLoop: Double = 0, linear: Double = 0
+        for result in results {
+            binarySearchRecursively += result.0
+            binarySearchLoop += result.1
+            linear += result.2
+        }
+        print("sum of binarySearchRecursively \(results.count) times = \(binarySearchRecursively / Double(results.count))")
+        print("sum of binarySearchLoop \(results.count) times = \(binarySearchLoop / Double(results.count))")
+        print("sum of linear \(results.count) times = \(linear / Double(results.count))")
+        print("\n\n")
+    }
+    
+    func testHash() {
+        print("\n\n")
+        let input = [10, 7, 3, 12, 9, 5, 1]
+        let hashList = HashList(list: input)
+        hashList.printSelf()
+        for el in input {
+            print("\(el) is stored on hashList's \(hashList.search(el))")
+        }
         print("\n\n")
     }
     
@@ -178,6 +288,25 @@ class SwiftAlgorithmsTests: XCTestCase {
         let str2 = "akazcka"
         print("\(str2) is palindrome? \(str2.isPalindrome())")
 //        Palindromes.isPalindrome(str)
+        
+        func checkPalindrome(_ str: String) -> Bool {
+            let str = str.replacingOccurrences(of: "\\W", with: "", options: String.CompareOptions.regularExpression, range: nil).lowercased()
+            var left = 0, right = str.length - 1
+            let chars = Array(str)
+            print(chars)
+            while left < right {
+                if chars[left] == chars[right] {
+                    left += 1
+                    right -= 1
+                } else {
+                    return false
+                }
+            }
+            return true
+        }
+        print("\(str) is palindrome? \(checkPalindrome(str))")
+        print("\(str2) is palindrome? \(checkPalindrome(str2))")
+        
         print("\n\n")
     }
     

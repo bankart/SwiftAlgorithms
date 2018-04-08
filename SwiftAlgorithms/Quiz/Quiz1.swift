@@ -25,5 +25,16 @@ func testSample1() {
      // https://mailprogramming.com/solution/1?email=bankart0218@gmail.com&token=029ab5f2c6f957ef0980aafee46830176f28da8dc2c0ec6acb0f8939dd077c63
      */
     
-    
+    let input =  [-5, -3, -1] // [-1, 3, -1, 5] // [2, 4, -2, -3, 8]
+    func solusion(_ list: [Int]) -> Int {
+        var currentMax = list.first!
+        var maxSum = list.first!
+        for i in 1..<list.count {
+            currentMax = max(currentMax + list[i], list[i])
+            maxSum = max(maxSum, currentMax)
+        }
+        return maxSum
+    }
+    let output = solusion(input)
+    print(output)
 }
