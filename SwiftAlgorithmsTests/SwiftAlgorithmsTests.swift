@@ -53,8 +53,23 @@ class SwiftAlgorithmsTests: XCTestCase {
     }
     
     func testQuiz() {
-        GoogleWorks.findPairOfSum()
-        testSample1()
+        print("\n\n")
+//        GoogleWorks.findPairOfSum()
+//        print()
+//        testSample1()
+//        print()
+//        testSample2()
+//        print()
+//        testSample3()
+//        print()
+//        testSample4()
+//        print()
+//        testSample5()
+//        print()
+//        testSample6()
+//        print()
+        KakaoFirst.secretMap()
+        print("\n\n")
     }
     
     func testTimeComplexity() {

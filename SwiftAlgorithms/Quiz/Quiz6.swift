@@ -9,6 +9,7 @@
 import Foundation
 
 func testSample6() {
+    print("\(#function)")
     /*
      주어진 string 에 모든 단어를 거꾸로 하시오.
      예제)
@@ -35,11 +36,12 @@ func testSample6() {
         var components = str.components(separatedBy: " ")
         print("components: \(components)")
         for i in 0..<components.count {
-            var stack = [Character]()
-            let part = components[i]
-            for char in part {
-                stack.append(char)
-            }
+            var stack = Array(components[i])
+//            var stack = [Character]()
+//            let part = components[i]
+//            for char in part {
+//                stack.append(char)
+//            }
             print("stacked: \(stack)")
             var reversed = [Character]()
             for i in stride(from: stack.count-1, through: 0, by: -1) {

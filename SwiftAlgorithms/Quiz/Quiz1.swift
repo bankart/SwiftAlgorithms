@@ -9,8 +9,9 @@
 import Foundation
 
 func testSample1() {
-    print("\n\n")
+    print("\(#function)")
     /*
+     [help]
      정수 배열(int array)가 주어지면 가장 큰 이어지는 원소들의 합을 구하시오. 단, 시간복잡도는 O(n).
      예제}
      Input: [-1, 3, -1, 5]
