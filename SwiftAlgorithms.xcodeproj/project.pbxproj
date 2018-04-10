@@ -19,6 +19,7 @@
 		E3444844207510F400061935 /* Quiz7.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3444843207510F400061935 /* Quiz7.swift */; };
 		E34448462075110900061935 /* Quiz8.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34448452075110900061935 /* Quiz8.swift */; };
 		E34448482075112200061935 /* Quiz9.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34448472075112200061935 /* Quiz9.swift */; };
+		E3548AA1207B17A200296A47 /* Quiz10.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3548AA0207B17A200296A47 /* Quiz10.swift */; };
 		E3781E08205F8A0E0060B44C /* Palindromes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3781E07205F8A0E0060B44C /* Palindromes.swift */; };
 		E3781E0B205F98A20060B44C /* Permutations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3781E0A205F98A20060B44C /* Permutations.swift */; };
 		E385F38820513AE10028DD32 /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E385F38720513AE10028DD32 /* InsertionSort.swift */; };
@@ -27,6 +28,7 @@
 		E3A1163420777E4200A129A1 /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1163320777E4200A129A1 /* BubbleSort.swift */; };
 		E3A7D9D7207A1F2600518BF8 /* HashSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A7D9D6207A1F2600518BF8 /* HashSearch.swift */; };
 		E3A8F4AF205BBCC200F8C383 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8F4AE205BBCC200F8C383 /* Utils.swift */; };
+		E3BA5743207CFE4A008E7D06 /* HackerRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BA5742207CFE4A008E7D06 /* HackerRank.swift */; };
 		E3DC787D205D27220042A4B7 /* SampleForShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DC787C205D27220042A4B7 /* SampleForShare.swift */; };
 		E3E600AE206DE4F000DCD043 /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E600AD206DE4F000DCD043 /* Fibonacci.swift */; };
 		E3F6F57A2060F8FB003F3F21 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6F5792060F8FB003F3F21 /* Heap.swift */; };
@@ -69,6 +71,7 @@
 		E3444843207510F400061935 /* Quiz7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz7.swift; sourceTree = "<group>"; };
 		E34448452075110900061935 /* Quiz8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz8.swift; sourceTree = "<group>"; };
 		E34448472075112200061935 /* Quiz9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz9.swift; sourceTree = "<group>"; };
+		E3548AA0207B17A200296A47 /* Quiz10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz10.swift; sourceTree = "<group>"; };
 		E3781E07205F8A0E0060B44C /* Palindromes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palindromes.swift; sourceTree = "<group>"; };
 		E3781E0A205F98A20060B44C /* Permutations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permutations.swift; sourceTree = "<group>"; };
 		E385F38720513AE10028DD32 /* InsertionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
@@ -77,6 +80,7 @@
 		E3A1163320777E4200A129A1 /* BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
 		E3A7D9D6207A1F2600518BF8 /* HashSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashSearch.swift; sourceTree = "<group>"; };
 		E3A8F4AE205BBCC200F8C383 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		E3BA5742207CFE4A008E7D06 /* HackerRank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerRank.swift; sourceTree = "<group>"; };
 		E3DC787C205D27220042A4B7 /* SampleForShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleForShare.swift; sourceTree = "<group>"; };
 		E3E600AD206DE4F000DCD043 /* Fibonacci.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
 		E3F6F5792060F8FB003F3F21 /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				E34448452075110900061935 /* Quiz8.swift */,
 				E34448472075112200061935 /* Quiz9.swift */,
 				E32DF6A22079496B008E87BE /* Quiz0.swift */,
+				E3548AA0207B17A200296A47 /* Quiz10.swift */,
+				E3BA5742207CFE4A008E7D06 /* HackerRank.swift */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -405,6 +411,7 @@
 				E3E600AE206DE4F000DCD043 /* Fibonacci.swift in Sources */,
 				E304F7EA205971A3000DB048 /* CodeSnippets.swift in Sources */,
 				E3A8F4AF205BBCC200F8C383 /* Utils.swift in Sources */,
+				E3BA5743207CFE4A008E7D06 /* HackerRank.swift in Sources */,
 				E3A7D9D7207A1F2600518BF8 /* HashSearch.swift in Sources */,
 				E3781E0B205F98A20060B44C /* Permutations.swift in Sources */,
 				E34448482075112200061935 /* Quiz9.swift in Sources */,
@@ -423,6 +430,7 @@
 				E3444840207510C500061935 /* Quiz5.swift in Sources */,
 				E34448462075110900061935 /* Quiz8.swift in Sources */,
 				E3A116322077668F00A129A1 /* MergeSort.swift in Sources */,
+				E3548AA1207B17A200296A47 /* Quiz10.swift in Sources */,
 				E3DC787D205D27220042A4B7 /* SampleForShare.swift in Sources */,
 				E34448382075105600061935 /* Quiz1.swift in Sources */,
 			);
