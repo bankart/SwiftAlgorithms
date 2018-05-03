@@ -70,6 +70,19 @@ class Fibonacci {
         if n <= 1{ return numbers }
         return [sum] + numberWithRecursion(n-1, first: second, second: sum)
     }
+    
+    static func allFib(n: Int) -> [Int] {
+        var all = [0, 1]
+        if n == 0 { return all }
+        var num1 = 0, num2 = 1
+        for _ in 1..<n {
+            let sum = num1 + num2
+            num1 = num2
+            num2 = sum
+            all.append(sum)
+        }
+        return all
+    }
 }
 
 /*

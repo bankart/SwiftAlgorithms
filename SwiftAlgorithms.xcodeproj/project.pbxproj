@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E304F7EA205971A3000DB048 /* CodeSnippets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E304F7E9205971A3000DB048 /* CodeSnippets.swift */; };
+		E324153F207DAA64000F2AD1 /* CountingSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E324153E207DAA64000F2AD1 /* CountingSort.swift */; };
 		E32DF6A32079496B008E87BE /* Quiz0.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32DF6A22079496B008E87BE /* Quiz0.swift */; };
 		E32DF6A620794E2E008E87BE /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32DF6A520794E2E008E87BE /* BinarySearch.swift */; };
 		E34448382075105600061935 /* Quiz1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34448372075105600061935 /* Quiz1.swift */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		E304F7E9205971A3000DB048 /* CodeSnippets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnippets.swift; sourceTree = "<group>"; };
+		E324153E207DAA64000F2AD1 /* CountingSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingSort.swift; sourceTree = "<group>"; };
 		E32DF6A22079496B008E87BE /* Quiz0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz0.swift; sourceTree = "<group>"; };
 		E32DF6A520794E2E008E87BE /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
 		E34448372075105600061935 /* Quiz1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz1.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				E3A1162F2077665300A129A1 /* QuickSort.swift */,
 				E3A116312077668F00A129A1 /* MergeSort.swift */,
 				E3A1163320777E4200A129A1 /* BubbleSort.swift */,
+				E324153E207DAA64000F2AD1 /* CountingSort.swift */,
 			);
 			path = Sorting;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				E3444840207510C500061935 /* Quiz5.swift in Sources */,
 				E34448462075110900061935 /* Quiz8.swift in Sources */,
 				E3A116322077668F00A129A1 /* MergeSort.swift in Sources */,
+				E324153F207DAA64000F2AD1 /* CountingSort.swift in Sources */,
 				E3548AA1207B17A200296A47 /* Quiz10.swift in Sources */,
 				E3DC787D205D27220042A4B7 /* SampleForShare.swift in Sources */,
 				E34448382075105600061935 /* Quiz1.swift in Sources */,

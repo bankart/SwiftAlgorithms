@@ -85,4 +85,27 @@ struct Permutations {
         }
     }
     
+    func permutation<T>(list: [T], n: Int) {
+        print(#function)
+        var result = [[T]]()
+        func permute(arr: [T], n: Int) {
+            if n == arr.count - 1 {
+                // swap 완료된 경우
+                result.append(arr)
+            } else {
+                var list = arr
+                for i in n..<list.count {
+                    // swap 1
+                    list.swapAt(i, n)
+                    // swap 2
+                    permute(arr: list, n: n + 1)
+                    // swap 1 원복.
+                    list.swapAt(i, n)
+                }
+            }
+        }
+        permute(arr: list, n: n)
+        print(result)
+    }
+    
 }
