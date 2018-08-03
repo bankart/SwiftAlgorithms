@@ -23,5 +23,9 @@ class ViewController: UIViewController {
     private func foo() {
         print(#function)
     }
+    
+    private func bar() {
+        print(#function)
+    }
 }
 
